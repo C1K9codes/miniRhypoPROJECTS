@@ -51,6 +51,5 @@
     axis.text = element_text(color = "black"),
     panel.grid.minor = element_blank()
   )
-## results
-!
+## results 
 
