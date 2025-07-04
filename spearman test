@@ -1,26 +1,24 @@
-# Spearman correlation between smoking pack years VS mutation count using nsclc_tcga_broad_2016_clinical_data
-## first step is for better visualization install and load ggplot2 library
+#Spearman correlation between smoking pack years VS mutation count using nsclc_tcga_broad_2016_clinical_data
+##first step is for better visualization install and load ggplot2 library
 
 > install.packages("ggplot2")
 > library(ggplot2)
 
-## IMPORT DATA SET (clinical data set from cBioPortal) for any cancer type you like in this study the dataset I utilized was NSCLC pan analysis 2016.
-## .tsv file can easily be uploaded via import datasets from txt
+##IMPORT DATA SET (clinical data set from cBioPortal) for any cancer type you like in this study the dataset I utilized was NSCLC pan analysis 2016.
+##.tsv file can easily be uploaded via import datasets from txt
 
-# This is a basic spearman correlation test only used when the variables in the data collected are not equally distributes .
-## The study was designed to establish a correlation between to axis X= Person.Cigarette.Smoking.History.Pack.Year.Value and Y= Mutation.Count.
-## R is highly case sensitive use caps/smalls wherever required
+#This is a basic spearman correlation test only used when the variables in the data collected are not equally distributes .
+##The study was designed to establish a correlation between to axis X= Person.Cigarette.Smoking.History.Pack.Year.Value and Y= Mutation.Count.
+##R is highly case sensitive use caps/smalls wherever required
 
-## ![Rplot05](https://github.com/user-attachments/assets/2e37c078-2413-4217-87b4-ea8be27a15ad)
-COMMAND LINE FOR CORRELATION TEST
+## COMMAND LINE FOR CORRELATION TEST
 > cor.test(nsclc_tcga_broad_2016_clinical_data$Person.Cigarette.Smoking.History.Pack.Year.Value, nsclc_tcga_broad_2016_clinical_data$Mutation.Count, metho= "spearman")
->
-> ## OUTPUT
-> ### Rho= 0.16 (weak correlation but significant)
-> ### p-value<0.001 (statistically significant)
-> ##if the results along with the values showed cannot compute exact p-values with ties,, it shows they are safe to ignore as data had some repeated values
-> ## visualize with ggplot2
->
+
+## OUTPUT
+### Rho= 0.16 (weak correlation but significant)
+### p-value<0.001 (statistically significant)
+##if the results along with the values showed cannot compute exact p-values with ties,, it shows they are safe to ignore as data had some repeated values
+## visualize with ggplot2
 > ggplot(
   data = nsclc_tcga_broad_2016_clinical_data,
   mapping = aes(
