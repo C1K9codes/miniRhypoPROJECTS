@@ -15,8 +15,8 @@
 > cor.test(nsclc_tcga_broad_2016_clinical_data$Person.Cigarette.Smoking.History.Pack.Year.Value, nsclc_tcga_broad_2016_clinical_data$Mutation.Count, metho= "spearman")
 
 ## OUTPUT
-### Rho= 0.16 (weak correlation but significant)
-### p-value<0.001 (statistically significant)
+###Rho= 0.16 (weak correlation but significant)
+###p-value<0.001 (statistically significant)
 ##if the results along with the values showed cannot compute exact p-values with ties,, it shows they are safe to ignore as data had some repeated values
 ## visualize with ggplot2
 > ggplot(
@@ -52,5 +52,5 @@
     panel.grid.minor = element_blank()
   )
 ## results
-![Rplot05](https://github.com/user-attachments/assets/5d7efd47-7724-46a0-bbff-173c0db54540)
+!
 
